@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: dc-metro-map
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/tnevrlka-test/release-e2e-deploy-tenant/appstudio/dc-metro-map@sha256:9f7a87f3df6177c5307c3114d08fc4967ed94fd0b59fdb18da3e2ef7c184da32
+        name: my-nodejs
+        resources: {}
+status: {}
